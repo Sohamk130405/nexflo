@@ -56,7 +56,6 @@ const RegisterForm = () => {
     },
   });
   const onSubmit = async (values: RegisterValues) => {
-    
     await authClient.signUp.email(
       {
         email: values.email,
@@ -95,6 +94,12 @@ const RegisterForm = () => {
                     type="button"
                     disabled={isPending}
                   >
+                    <Image
+                      src={"/google.svg"}
+                      width={20}
+                      height={20}
+                      alt="google"
+                    />
                     Continue with Google
                   </Button>
                   <Button
@@ -103,6 +108,12 @@ const RegisterForm = () => {
                     type="button"
                     disabled={isPending}
                   >
+                    <Image
+                      src={"/github.svg"}
+                      width={20}
+                      height={20}
+                      alt="github"
+                    />
                     Continue with Github
                   </Button>
                 </div>
